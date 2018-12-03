@@ -1,1 +1,1 @@
-The Bigdata Comprehensive Display Platform
+The Big data Comprehensive Display Platform
