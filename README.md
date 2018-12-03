@@ -1,1 +1,1 @@
-datahome_java
+The Bigdata Comprehensive Display Platform
