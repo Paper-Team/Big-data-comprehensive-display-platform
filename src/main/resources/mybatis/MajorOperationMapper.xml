@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.huatec.datahome.dao.MajorOprationDao">
+
+    <!--    <cache type="com.bootdo.common.utils.MybatisRedisCache" />-->
+
+    <!-- 专业运营基础 -->
+    <select id="majorOprationBase" resultType="com.huatec.datahome.domain.TitlePageNumDO">
+        SELECT *
+        FROM title_page_num
+        ORDER BY page_title_num ASC
+    </select>
+
+    <!-- 专业就业率 -->
+    <select id="majorEmploymentRate" resultType="com.huatec.datahome.domain.KeyStrValDoubleDO">
+        SELECT
+            tb.major_name      AS `name`,
+            tb.employment_rate AS `value`
+        FROM major_employment_rate tb
+    </select>
+
+    <!-- 工程师行业背景 -->
+    <select id="engineerBackground" resultType="com.huatec.datahome.domain.KeyStrValIntDO">
+        SELECT
+            tb.major_name AS `name`,
+            tb.people_num AS `value`
+        FROM projector_background tb
+        order by tb.people_num desc
+    </select>
+
+    <select id="queryProvinceSchoolList" resultType="Map">
+
+        <!-- SELECT d.collage_name name, CONCAT(lon,',',lat) value from longlat l join (select d.collage_name,d.province,d.city  as city from department d where d.region != '2025项目') d on d.city=l.city -->
+        select DISTINCT collage_name name,CONCAT(lon,',',latt) value from department
+        <where>
+            <if test="province != null and province != ''">AND province=#{province}</if>
+        </where>
+    </select>
+
+    <!--各省学校数量-->
+    <select id="queryProvinceSchoolNumberList" resultType="com.huatec.datahome.domain.KeyStrValLongDO">
+        select  province 'name',count(DISTINCT dep_name) 'value' from department GROUP BY province
+    </select>
+
+</mapper>

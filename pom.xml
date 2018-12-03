@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+     <modelVersion>4.0.0</modelVersion>
+
+     <groupId>com.huatec</groupId>
+     <artifactId>datahome</artifactId>
+     <version>0.0.1-SNAPSHOT</version>
+     <packaging>war</packaging>
+
+     <name>datahome</name>
+     <description>datahome 2.4</description>
+
+     <parent>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-parent</artifactId>
+          <version>2.0.1.RELEASE</version>
+          <relativePath/> <!-- lookup parent from repository -->
+     </parent>
+
+     <properties>
+          <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+          <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+          <java.version>1.8</java.version>
+          <mybatisplus-spring-boot-starter.version>1.0.4</mybatisplus-spring-boot-starter.version>
+          <springboot.version>1.5.6.RELEASE</springboot.version>
+
+     </properties>
+
+     <dependencies>
+          <dependency>
+               <groupId>org.springframework.boot</groupId>
+               <artifactId>spring-boot-starter-web</artifactId>
+               <version>${springboot.version}</version>
+          </dependency>
+          <dependency>
+               <groupId>org.springframework.boot</groupId>
+               <artifactId>spring-boot-starter-aop</artifactId>
+          </dependency>
+          <dependency>
+               <groupId>org.springframework.boot</groupId>
+               <artifactId>spring-boot-starter-test</artifactId>
+               <scope>test</scope>
+          </dependency>
+          <!--mybatis -->
+          <dependency>
+               <groupId>mysql</groupId>
+               <artifactId>mysql-connector-java</artifactId>
+               <scope>runtime</scope>
+          </dependency>
+          <dependency>
+               <groupId>org.mybatis.spring.boot</groupId>
+               <artifactId>mybatis-spring-boot-starter</artifactId>
+               <version>1.3.2</version>
+          </dependency>
+          <!--druid -->
+          <dependency>
+               <groupId>com.alibaba</groupId>
+               <artifactId>druid</artifactId>
+               <version>1.0.28</version>
+          </dependency>
+          <!--commons -->
+          <dependency>
+               <groupId>org.apache.commons</groupId>
+               <artifactId>commons-lang3</artifactId>
+               <version>3.6</version>
+          </dependency>
+          <dependency>
+               <groupId>commons-configuration</groupId>
+               <artifactId>commons-configuration</artifactId>
+               <version>1.10</version>
+          </dependency>
+          <dependency>
+               <groupId>commons-io</groupId>
+               <artifactId>commons-io</artifactId>
+               <version>2.5</version>
+          </dependency>
+          <!-- utils -->
+          <dependency>
+               <groupId>com.alibaba</groupId>
+               <artifactId>fastjson</artifactId>
+               <version>1.2.31</version>
+          </dependency>
+          <dependency>
+               <groupId>org.apache.httpcomponents</groupId>
+               <artifactId>httpclient</artifactId>
+               <version>4.5.4</version>
+          </dependency>
+          <dependency>
+               <groupId>javax.servlet</groupId>
+               <artifactId>javax.servlet-api</artifactId>
+               <version>3.1.0</version>
+               <scope>provided</scope>
+          </dependency>
+
+          <!-- redis -->
+          <dependency>
+               <groupId>org.springframework.boot</groupId>
+               <artifactId>spring-boot-starter-data-redis</artifactId>
+               <version>1.5.8.RELEASE</version>
+          </dependency>
+          
+          <dependency>
+               <groupId>org.springframework.boot</groupId>
+               <artifactId>spring-boot-starter-thymeleaf</artifactId>
+          </dependency>
+     </dependencies>
+
+     <build>
+          <plugins>
+               <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+               </plugin>
+          </plugins>
+
+          <resources>
+               <resource>
+                    <directory>src/main/resources</directory>
+               </resource>
+               <resource>
+                    <directory>src/main/java</directory>
+                    <includes>
+                         <include>**/*.xml</include>
+                    </includes>
+               </resource>
+          </resources>
+     </build>
+
+     <repositories>
+          <repository>
+               <id>public</id>
+               <name>aliyun nexus</name>
+               <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+               <releases>
+                    <enabled>true</enabled>
+               </releases>
+          </repository>
+     </repositories>
+
+     <pluginRepositories>
+          <pluginRepository>
+               <id>public</id>
+               <name>aliyun nexus</name>
+               <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+               <releases>
+                    <enabled>true</enabled>
+               </releases>
+               <snapshots>
+                    <enabled>false</enabled>
+               </snapshots>
+          </pluginRepository>
+     </pluginRepositories>
+
+</project>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.huatec.datahome.dao.EmploymentDao">
+
+    <!-- 项目部课程数量top10 -->
+    <select id="employmentNum" resultType="com.huatec.datahome.domain.EmploymentDO" parameterType="String">
+        SELECT
+            undergraduate_female,
+            undergraduate_male,
+            vocational_female,
+            vocational_male
+        FROM employment
+        where major_name = #{majorName}
+    </select>
+
+    <select id="structureNum" resultType="com.huatec.datahome.domain.KeyStrValIntDO">
+        SELECT
+            structure  name,
+            employment value
+        FROM employment_structure
+        where major_name = #{majorName}
+    </select>
+
+    <select id="salaryCompared" resultType="com.huatec.datahome.domain.SalaryComparedDO">
+        SELECT
+            grade,
+            average_salary,
+            graduate_salary
+        FROM salary_compared
+        where major_name = #{majorName}
+        ORDER BY grade ASC
+    </select>
+
+    <select id="graduateSalary" resultType="com.huatec.datahome.domain.GraduateSalaryDO">
+        SELECT
+            graduate_salary,
+            average_salary,
+            graduation_duration
+        FROM graduate_salary
+        where major_name = #{majorName}
+    </select>
+
+    <select id="employmentRadio" resultType="com.huatec.datahome.domain.KeyStrValDoubleDO">
+        SELECT
+            grade name,
+            radio value
+        FROM employment_radio
+        where major_name = #{majorName}
+        ORDER BY grade ASC
+    </select>
+
+    <select id="graduateAbility" resultType="com.huatec.datahome.domain.GraduateAbilityDO">
+        SELECT *
+        FROM graduate_ability
+        where major_name = #{majorName}
+        ORDER BY type, ability
+    </select>
+
+    <select id="graduateEmployment" resultType="com.huatec.datahome.domain.GraduateEmploymentDO">
+        SELECT *
+        FROM graduate_employment
+        where major_name = #{majorName}
+    </select>
+
+</mapper>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>经世数家</title>
+		<script src="js/wisdomStudy4.js"></script>
+		<style type="text/css">
+			.basicInfoLi{
+				padding: 20px 0;
+				margin: 0;				
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box clearfix wisdom1" style="height: 960px;padding-top: 0px;padding-top: 0;">
+			<div class="left clearfix">
+				<div class="title" style="width: 600px;">基本信息</div>
+				<ul class="basicInfo clearfix" style="background: #191E46;height: 280px;width: 620px;">
+					<li class="basicInfoLi clearfix">
+						<div class="basicInfoLeft">
+							<img src="img/professionalanalysis2/zyfx_kaisheshijian.png" />
+						</div>
+						<div class="basicInforight">
+							<p class="text">学校</p>
+							<p class="numb"><i id="xuexiao">0</i>所</p>
+						</div>
+					</li>
+					<li class="basicInfoLi clearfix">
+						<div class="basicInfoLeft">
+							<img src="img/professionalanalysis2/zyfx_xueshengrenshu.png" />
+						</div>
+						<div class="basicInforight">
+							<p class="text">教师人数</p>
+							<p class="numb"><i id="jiaoshi">0</i>名</p>
+						</div>
+					</li>
+					<li class="basicInfoLi clearfix">
+						<div class="basicInfoLeft">
+							<img src="img/professionalanalysis2/zyfx_jiaocai.png" />
+						</div>
+						<div class="basicInforight">
+							<p class="text">班级</p>
+							<p class="numb"><i id="banji">0</i>个</p>
+						</div>
+					</li>
+					<li class="basicInfoLi clearfix">
+						<div class="basicInfoLeft">
+							<img src="img/professionalanalysis2/zyfx_shizituandui.png" />
+						</div>
+						<div class="basicInforight">
+							<p class="text">学生人数</p>
+							<p class="numb"><i id="xuesheng">0</i>位</p>
+						</div>
+					</li>
+
+				</ul>
+				<div style="margin-top: 15px;margin-left: 20px;margin-bottom: -15px; font-size: 20px">学生上线情况</div>
+
+				<div class="partnerSchools clearfix" style="border-color: #FBCB10;">
+					<div class="icon">
+						<img src="img/wisdomStudy4/zhxx_xuesheng_pingjunshangxianlv.png" />
+						<p>平均上线率</p>
+					</div>
+					<div id="canvas1" class="totalNumber ring"></div>
+				</div>
+				<div class="partnerSchools clearfix" style="border-color: #FB497C;">
+					<div class="icon">
+						<img src="img/wisdomStudy4/zhxx_xuesheng_tongxungongcheng.png" />
+						<p>通信</p>
+					</div>
+					<div id="canvas2" class="totalNumber ring"></div>
+				</div>
+				<div class="partnerSchools clearfix" style="border-color: #4FCCFF;">
+					<div class="icon">
+						<img src="img/wisdomStudy4/zhxx_xuesheng_yidonghulian.png" />
+						<p>移动互联</p>
+					</div>
+					<div id="canvas3" class="totalNumber ring"></div>
+				</div>
+				<div class="partnerSchools clearfix" style="border-color: #4ADCBB;">
+					<div class="icon">
+						<img src="img/wisdomStudy4/zhxx_xuesheng_yunjisuan.png" />
+						<p>云计算</p>
+					</div>
+					<div id="canvas4" class="totalNumber ring"></div>
+				</div>
+				<div class="partnerSchools clearfix" style="border-color: #6ADC1F;">
+					<div class="icon">
+						<img src="img/wisdomStudy4/zhxx_xuesheng_hulianwang.png" />
+						<p>物联网</p>
+					</div>
+					<div id="canvas5" class="totalNumber ring"></div>
+				</div>
+				<div class="partnerSchools clearfix" style="border-color: #FC76FF;">
+					<div class="icon">
+						<img src="img/wisdomStudy4/zhxx_xuesheng_zhinengzhizao.png" />
+						<p>智能制造</p>
+					</div>
+					<div id="canvas6" class="totalNumber ring"></div>
+				</div>
+
+			</div>
+			<div class="center">
+				<div class="wisPeopNumbBox">
+					<span class="wisPeopNumb">实时学习人数</span>
+					<ul id="getOnlineStuFive" data-id='0' class="peopleNumb clearfix" style="margin-top: 0;margin-right: 20px;">
+						<li class="peopleNumbLi" id="getOnlineStuFive0">0</li>
+						<li class="peopleNumbLi" id="getOnlineStuFive1">0</li>
+						<li class="comma">,</li>
+						<li class="peopleNumbLi" id="getOnlineStuFive2">0</li>
+						<li class="peopleNumbLi" id="getOnlineStuFive3">0</li>
+						<li class="peopleNumbLi" id="getOnlineStuFive4">0</li>
+					</ul>
+					<div style="height:180px;padding-top: 60px;" id="onlineUser"></div>
+				</div>
+				<div class="wisdomEchars1 clearfix" style="margin-top: 10px;">
+					<div id="majorNum" class="wisEchars7"></div>
+					<div id="loginWay" class="wisEchars8" style="width: 300px;padding-left: 10px;"></div>
+
+				</div>
+				<div class="wisdomEchars1" id='mobileStudyDistribute'></div>
+
+			</div>
+
+			<div class="right" style="background: #202554;">
+				<div class="wisClick clearfix">
+					<span class="wisPeopNumb">当日总点击量</span>
+					<ul id="d3-zongdianjiliang" class="peopleNumb clearfix" style="margin-top: 0;margin-right: 20px;">
+						<li class="peopleNumbLi" id="d3-zongdianjiliang0">0</li>
+						<li class="peopleNumbLi" id="d3-zongdianjiliang1">0</li>
+						<li class="comma">,</li>
+						<li class="peopleNumbLi" id="d3-zongdianjiliang2">0</li>
+						<li class="peopleNumbLi" id="d3-zongdianjiliang3">0</li>
+						<li class="peopleNumbLi" id="d3-zongdianjiliang4">0</li>
+					</ul>
+				</div>
+				<ul class="wisOption clearfix" style="margin-top: 0;padding: 25px 0;width: 630px;">
+					<li class="wisOptionLi">
+						<span>课程点击量</span>
+						<i id="kecheng">0</i>
+					</li>
+					<li class="wisOptionLi">
+						<span>微课视频点击量</span>
+						<i id="weike">0</i>
+					</li>
+					<li class="wisOptionLi">
+						<span>录播视频点击量</span>
+						<i id="lubo">0</i>
+					</li>
+					<li class="wisOptionLi">
+						<span>课件点击量</span>
+						<i id="kejian">0</i>
+					</li>
+				</ul>
+				<div class="wisdomEchars3 clearfix" style="height: 360px;">
+
+					<div class="wisdomEchars9" id="hourOnline" style="height:371px;"></div>
+
+					<ul class="wisdomEchars10" style="height:371px;background:#202554;">
+						<div class="studyHotTitle">项目部学习热度 TOP5</div>
+						<li class="studyHotLi">
+							<div class="studyHotIcon">
+								<img src="img/wisdomStudy4/zhxx_xuesheng_paiming1.png" />
+							</div>
+							<span id="top1">学院</span>
+							<i id="top11">0</i>
+						</li>
+						<li class="studyHotLi">
+							<div class="studyHotIcon">
+								<img src="img/wisdomStudy4/zhxx_xuesheng_paiming2.png" />
+							</div>
+							<span id="top2">学院</span>
+							<i id="top22">0</i>
+						</li>
+						<li class="studyHotLi">
+							<div class="studyHotIcon">
+								<img src="img/wisdomStudy4/zhxx_xuesheng_paiming3.png" />
+							</div>
+							<span id="top3">学院</span>
+							<i id="top33">0</i>
+						</li>
+						<li class="studyHotLi">
+							<div class="studyHotIcon">
+								4
+							</div>
+							<span id="top4">学院</span>
+							<i id="top44">0</i>
+						</li>
+						<li class="studyHotLi">
+							<div class="studyHotIcon">
+								5
+							</div>
+							<span id="top5">学院</span>
+							<i id="top55">0</i>
+						</li>
+					</ul>
+
+					<div class="wisdomEchars6"></div>
+
+				</div>
+				<div id="studyBehavior" style="position: absolute;padding-top: 10px;background: #191E46;" class="wisdomEchars4"></div>
+
+			</div>
+
+		</div>
+	</body>
+
+</html>

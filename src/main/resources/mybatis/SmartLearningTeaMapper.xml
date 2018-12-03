@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.huatec.datahome.dao.SmartLearningTeaDao">
+
+<!--    <cache type="com.bootdo.common.utils.MybatisRedisCache" />-->
+
+    <!-- 智慧学习基础 -->
+    <select id="smartLearningBase" resultType="com.huatec.datahome.domain.HuatecTeacherDO">
+        select * FROM huatec_teacher order by title_page_num asc
+    </select>
+
+    <!-- 最近30天教师登陆人次 -->
+    <select id="teacherLogin" resultType="com.huatec.datahome.domain.KeyStrValIntDO">
+        select DATE_FORMAT(tb.login_date, "%Y-%m-%d") as `name` ,tb.login_num as `value`
+        FROM teacher_login tb
+        ORDER BY tb.login_date asc
+    </select>
+
+    <!-- 精品必修 -->
+    <select id="courseNum" resultType="com.huatec.datahome.domain.KeyStrValIntDO">
+        select tb.course_category as `name` ,tb.course_num as `value`
+        FROM required_boutique_course tb
+    </select>
+
+    <!-- 课程信息 -->
+    <select id="courseInfo" resultType="com.huatec.datahome.domain.KeyStrValIntDO">
+        select tb.major_name as `name` ,tb.major_course as `value`
+        FROM major_basic tb
+        ORDER BY tb.major_course desc
+    </select>
+
+    <!-- 数字化资源占比 -->
+    <select id="resourcePercent" resultType="com.huatec.datahome.domain.KeyStrValIntDO">
+        select tb.name as `name` ,tb.value as `value`
+        FROM course_resources tb
+        ORDER BY tb.value desc
+    </select>
+
+    <!-- 最近30天新建课程数量 -->
+    <select id="createCourse" resultType="Map">
+        select date_format(tb.create_date, "%Y-%m-%d") as 'name' ,tb.create_num as 'value', tb.type as 'key'
+        FROM create_course tb
+        ORDER BY tb.create_date asc
+    </select>
+
+    <!-- 今天在线教师小时数量 -->
+    <select id="onlineTeaNum" resultType="com.huatec.datahome.domain.KeyStrValLongDO">
+        select concat( HOUR(lr.login_time), '') as 'name', count(distinct lr.login_user)  as 'value' from `com.huatec.study`.stu_login_record lr
+        where DATE_FORMAT(lr.login_time,'%Y-%m-%d')=CURRENT_DATE()
+              and lr.login_type!='P017'
+        group by HOUR(lr.login_time)
+    </select>
+
+</mapper>

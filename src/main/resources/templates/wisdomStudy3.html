@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>经世数家</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<script type="text/javascript" src="js/wisdomStudy3.js"></script>
+		<style type="text/css">
+			.basicInfoLi{
+				padding: 20px 0;
+				margin: 0;				
+			}
+			.partnerSchools{
+				margin-top: 35px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box clearfix wisdom" style="height: 960px;padding-top: 0px;">
+			<div class="left clearfix">
+				<div class="title">基本信息</div>
+				<ul class="basicInfo clearfix" style="padding-top: 0;height: 280px;">
+					<li class="basicInfoLi clearfix">
+						<div class="basicInfoLeft">
+							<img src="img/professionalanalysis2/zyfx_kaisheshijian.png" />
+						</div>
+						<div class="basicInforight">
+							<p class="text">学校</p>
+							<p class="numb"><i id="schoolnum">0</i>所</p>
+						</div>
+					</li>
+					<li class="basicInfoLi clearfix">
+						<div class="basicInfoLeft">
+							<img src="img/professionalanalysis2/zyfx_xueshengrenshu.png" />
+						</div>
+						<div class="basicInforight">
+							<p class="text">教师人数</p>
+							<p class="numb"><i id="teachernum">0</i>名</p>
+						</div>
+					</li>
+					<li class="basicInfoLi clearfix">
+						<div class="basicInfoLeft">
+							<img src="img/professionalanalysis2/zyfx_jiaocai.png" />
+						</div>
+						<div class="basicInforight">
+							<p class="text">班级</p>
+							<p class="numb"><i id="classnum">0</i>个</p>
+						</div>
+					</li>
+					<li class="basicInfoLi clearfix">
+						<div class="basicInfoLeft">
+							<img src="img/professionalanalysis2/zyfx_shizituandui.png" />
+						</div>
+						<div class="basicInforight">
+							<p class="text">学生人数</p>
+							<p class="numb"><i id="studentnum">0</i>位</p>
+						</div>
+					</li>
+				</ul>
+				<div class="partnerSchools clearfix" style="border-color: #FFAD00;">
+					<div class="icon">
+						<img src="img/wisdomStudy3/zhxx_laoshi_shipinshuliang.png" />
+					</div>
+					<div class="totalNumber">
+						<p class="text">视频数量/个</p>
+						<p class="numb" id="videonum">0</p>
+					</div>
+				</div>
+				<div class="partnerSchools clearfix" style="border-color: #E34E00;">
+					<div class="icon">
+						<img src="img/wisdomStudy3/zhxx_laoshi_shipinshichang.png" />
+					</div>
+					<div class="totalNumber">
+						<p class="text">视频时长/h</p>
+						<p class="numb" id="shipingtime">0</p>
+					</div>
+				</div>
+				<div class="partnerSchools clearfix" style="border-color: #4278FF;">
+					<div class="icon">
+						<img src="img/wisdomStudy3/zhxx_laoshi_shipinrongliang.png" />
+					</div>
+					<div class="totalNumber">
+						<p class="text">视频容量/G</p>
+						<p class="numb" id="shiping">0</p>
+					</div>
+				</div>
+				<div class="partnerSchools clearfix" style="border-color: #4ADCBB;">
+					<div class="icon">
+						<img src="img/wisdomStudy3/zhxx_laoshi_shijuanshuliang.png" />
+					</div>
+					<div class="totalNumber">
+						<p class="text">试卷数量/份</p>
+						<p class="numb" id="shijuan">0</p>
+					</div>
+				</div>
+				<div class="partnerSchools clearfix" style="border-color: #36D134;">
+					<div class="icon">
+						<img src="img/wisdomStudy3/zhxx_laoshi_kejianshuliang.png" />
+					</div>
+					<div class="totalNumber">
+						<p class="text">课件数量/份</p>
+						<p class="numb" id="kejian">0</p>
+					</div>
+				</div>
+				<div class="partnerSchools clearfix" style="border-color: #DA70D6;">
+					<div class="icon">
+						<img src="img/wisdomStudy3/zhxx_laoshi_zuoyeshuliang.png" />
+					</div>
+					<div class="totalNumber">
+						<p class="text">作业数量/份</p>
+						<p class="numb" id="zuoye">0</p>
+					</div>
+				</div>
+			</div>
+			<div class="center">
+				<div class="title">平台数据</div>
+				<ul class="wisOption clearfix">
+					<li class="wisOptionLi">
+						<span>当日新建/维护课程数量</span>
+						<i id="weihucourse">0</i>
+					</li>
+					<li class="wisOptionLi">
+						<span>当日上传视频数量</span>
+						<i id="upvideo">0</i>
+					</li>
+					<li class="wisOptionLi">
+						<span>当日上传课件数量</span>
+						<i id="upcourse">0</i>
+					</li>
+					<li class="wisOptionLi">
+						<span>当日发布直播数量</span>
+						<i id="uplive">0</i>
+					</li>
+				</ul>
+				<div class="wisdomEchars1" id="thirtyDayLogin" style="margin-top:20px;padding-top: 10px;height:320px;"></div>
+				<div class="wisdomEchars2" style="margin-top: 30px;">
+					<span class="wisPeopNumb">在线教师人数</span>
+					<ul id="getOnlineTeaFive" class="peopleNumb clearfix" style="float: left;margin-top: 0;">
+						<li class="peopleNumbLi" id="getOnlineTeaFive0">0</li>
+						<li class="peopleNumbLi" id="getOnlineTeaFive1">0</li>
+						<li class="comma">,</li>
+						<li class="peopleNumbLi" id="getOnlineTeaFive2">0</li>
+						<li class="peopleNumbLi" id="getOnlineTeaFive3">0</li>
+						<li class="peopleNumbLi" id="getOnlineTeaFive4">0</li>
+					</ul>
+					<div class="wisdomEchars3" id="onlineUser" style="padding-top: 60px;height: 310px;width: 620px;"></div>
+
+				</div>
+
+			</div>
+
+			<div class="right" style="background: #202554;">
+				<div class="title" style="width: 610px;">课程信息</div>
+				<div class="partnerSchools clearfix" style="margin-top: 10px;margin-left: 10px;border-color: #E34E00;width: 615px;float: none;height: 145px;margin-bottom: 15px;">
+					<div class="icon">
+						<img src="img/wisdomStudy3/zhxx_laoshi_kechengzongshu.png" />
+					</div>
+					<div class="totalNumber">
+						<p class="text">课程总数</p>
+						<p class="numb" id="coursesum">0</p>
+					</div>
+					<div class="each" style="border-color: #E34E00">
+						<div class="undergraduate"><span>必修课</span><i id="bixiu">0</i></div>
+						<div class="HigherVocational"><span>精品课</span><i id="jingping">0</i></div>
+					</div>
+				</div>
+				<div class="wisdomEchars3 clearfix">
+					<div class="wisdomEchars5" id="informationCourse"></div>
+					<div class="wisdomEchars6" id="numResources" style="width: 305px;padding-left: 10px;background: #191E46;"></div>
+
+				</div>
+				<div class="wisdomEchars4" id="compulsoryGoodCourse"></div>
+				<div id="ipAndPort" style="display: none" th:data-id=${ipAndPort}></div>
+			</div>
+
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.huatec.datahome.dao.MajorAnalysisDao">
+    
+    <!-- 项目部课程数量top10 -->
+    <select id="getMajorNum" resultType="java.lang.String">
+        select major_name from(
+        SELECT major_name, sort
+        FROM major_basic
+        GROUP BY major_name) tb
+        ORDER BY tb.sort asc
+    </select>
+    
+    <select id="getMajorBaseInfo" resultType="com.huatec.datahome.domain.MajorBasicDO">
+        SELECT
+            major_name,
+            major_book,
+            major_course,
+            major_course_hour,
+            major_student,
+            major_teacher,
+            undergraduate,
+            vocational,
+            setup_time,
+            major_satisfaction
+        FROM major_basic
+        WHERE major_name = #{majorName}
+    </select>
+    
+    <select id="getEmploymentPosition" resultType="com.huatec.datahome.domain.KeyStrValIntDO">
+        SELECT
+            employment_job name,
+            employment_num value
+        FROM major_employment
+        WHERE major_name = #{majorName}
+        ORDER BY employment_num desc
+    </select>
+    
+    <select id="gradeDistributed" resultType="com.huatec.datahome.domain.MajorAdmissionDO">
+        SELECT
+            grade,
+            vocational,
+            undergraduate
+        FROM major_admission
+        WHERE major_name = #{majorName}
+    </select>
+    
+    <select id="getDoubleCreate" resultType="com.huatec.datahome.domain.DoubleCreateDO">
+        SELECT
+            year_achievement,
+            product,
+            team
+        FROM double_create
+        WHERE major_name = #{majorName}
+    </select>
+
+</mapper>

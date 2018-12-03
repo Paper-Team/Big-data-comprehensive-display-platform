@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.huatec.datahome.dao.SmartLearningStuDao">
+
+<!--    <cache type="com.bootdo.common.utils.MybatisRedisCache" />-->
+
+    <!-- 智慧学习学生基础 -->
+    <select id="smartLearningBase" resultType="com.huatec.datahome.domain.HuatecStudentDO">
+        select * FROM huatec_student order by title_page_num asc
+    </select>
+
+    <!-- 最近30天各专业学习人数占比 -->
+    <select id="majorNum" resultType="com.huatec.datahome.domain.KeyStrValIntDO">
+        select tb.major_name as `name` ,tb.study_num as `value`
+        FROM major_study_student tb
+        ORDER BY tb.study_num desc
+    </select>
+
+    <!-- 24小时平均在线情况 -->
+    <select id="onlineState" resultType="Map">
+        select tb.`hour` as `name` ,tb.app_num as `app`, tb.pc_num as `pc`
+        FROM study_interval tb
+        ORDER BY tb.hour asc
+        
+    </select>
+
+    <!-- 最近30天学习行为记录 -->
+    <select id="studyRecord" resultType="Map">
+        select tb.behavior_name as `name` ,tb.app_num as `app`, tb.pc_num as `pc`
+        FROM study_behavior tb
+    </select>
+
+    <!-- 接入方式占比 -->
+    <select id="loginWay" resultType="com.huatec.datahome.domain.KeyStrValIntDO">
+        select tb.login_type  as 'name' ,tb.login_num  as 'value'
+        FROM login_record tb
+        ORDER BY tb.login_num desc
+    </select>
+
+    <!-- 项目部学习热度top5 -->
+    <select id="studyHot" resultType="com.huatec.datahome.domain.KeyStrValIntDO">
+        select tb.dep_name as `name` ,tb.heat_num as `value`
+        FROM dep_heat tb ORDER BY heat_num desc
+    </select>
+
+    <!-- 今天在线学生小时数量 -->
+    <select id="onlineStuNum" resultType="com.huatec.datahome.domain.KeyStrValLongDO">
+        select concat( HOUR(lr.login_time), '') as 'name', count(distinct lr.login_user)  as 'value' from `com.huatec.study`.stu_login_record lr
+        where DATE_FORMAT(lr.login_time,'%Y-%m-%d')=CURRENT_DATE()
+              and lr.login_type='P017'
+        group by HOUR(lr.login_time)
+    </select>
+
+</mapper>

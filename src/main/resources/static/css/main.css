@@ -1,0 +1,593 @@
+/*=================comment===================*/
+
+.content {
+	position: relative;
+	width: 1920px;
+	height: 1080px;
+	margin: 0 auto;
+	background: #282F59;
+	overflow: hidden;
+}
+
+.nav {
+	width: 1920px;
+	height: 120px;
+	background-color: #282F59;
+}
+
+.nav .title {
+	position: relative;
+	width: 620px;
+	height: 120px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.title .text {
+ 	color: #fff;
+ 	font-size: 58px;
+	line-height: 120px;
+}
+
+.pre,
+.next {
+	position: absolute;
+	top: 0px;
+	width: 80px;
+	height: 100px;
+	cursor: pointer;
+	padding-top: 20px;
+}
+
+.pre img,
+.next img {
+	width: 80px;
+	height: 80px;
+}
+
+.pre {
+	left: 0;
+}
+
+.next {
+	right: 0;
+}
+
+.timebox {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 320px;
+	height: 120px;
+	float: right;
+ 	color: #fff;
+ }
+
+.date,
+.time {
+	width: 100%;
+	height: 50px;
+	padding-top: 10px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 18px
+}
+
+.time {
+	padding-top: 0;
+	font-size: 24px
+}
+
+.mainBody {
+	width: 1920px;
+	height: 960px;
+	background: #1F2346;
+}
+
+.box {
+	width: 1920px;
+	height: 930px;
+	padding-top: 30px;
+ 	color: #fff;
+ 	background: #1F2346;
+}
+
+.left,
+.center,
+.right {
+	float: left;
+	width: 640px;
+	height: 930px;
+}
+
+.center {}
+
+.right {}
+
+
+/*============================================*/
+
+
+/*=================专业运营===================*/
+
+.proLeftTop,
+.proRightTop {
+	left: 0px;
+	top: 142px;
+	width: 640px;
+	height: 380px;
+	background-color: rgba(32, 37, 84, 1);
+	padding-top: 30px;
+}
+
+.partnerSchools,
+.schoolStudents {
+	width: 600px;
+	height: 157px;
+	background: #191E46;
+	margin-left: 10px;
+	border-left: 5px solid #E34E00;
+}
+
+.partnerSchools>div,
+.schoolStudents>div {
+	float: left;
+}
+
+.schoolStudents {
+	margin-top: 30px;
+}
+
+.icon {
+	width: 56px;
+	height: 160px;
+	line-height: 160px;
+	margin-left: 50px;
+}
+
+.icon img,
+.icon img {
+	width: 56px;
+	height: 112px;
+	vertical-align: middle;
+}
+
+.totalNumber {
+	width: 100px;
+	height: 54px;
+	margin-left: 50px;
+	margin-top: 53px;
+	text-align: center;
+}
+
+.totalNumber .text{
+	width: 120px;
+}
+
+.totalNumber .numb,
+.each i,
+.eachP i {
+	font-size: 36px;
+	color: #FBCB10;
+	width: 120px;
+}
+
+.each,
+.eachP {
+	width: 268px;
+	height: 100px;
+	margin-top: 30px;
+	border-left: 2px solid #E34E00;
+	margin-left: 70px;
+}
+
+.each .undergraduate,
+.each .HigherVocational {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+}
+
+.each span {
+	display: inline-block;
+	width: 150px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.each i {
+	width: 90px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.numberOfJobs,
+.industryBackground {
+	width: 640px;
+	height: 480px;
+	background: #202554;
+	margin-top: 30px;
+}
+
+.numberOfJobs .title,
+.industryBackground .title {
+	width: 620px;
+	height: 70px;
+	line-height: 70px;
+	padding-left: 20px;
+	background: #293567;
+}
+
+.peopleNumb {
+	float: right;
+	margin-top: 15px;
+}
+
+.peopleNumbLi,
+.comma {
+	float: left;
+	width: 30px;
+	height: 40px;
+	background: #191E46 100%;
+	font-size: 24px;
+	line-height: 40px;
+	text-align: center;
+	margin-right: 10px;
+	margin-top: 10px;
+	color: #4ADBBB;
+}
+
+.comma {
+	background: transparent;
+}
+
+.numberOfJobs .echars {
+	width: 640px;
+	height: 390px;
+ 	padding-top: 10px;
+ }
+
+.proEchars {
+	width: 640px;
+	height: 880px;
+/* 	background: #fff;
+ */}
+
+.eachP .development,
+.eachP .designer,
+.eachP .implementation {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+}
+
+.eachP .development {
+	margin-top: -30px;
+}
+
+.eachP span {
+	display: inline-block;
+	width: 150px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.eachP i {
+	width: 90px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.industryBackground .titleMax,
+.industryBackground .titleAve {
+	display: inline-block;
+	width: 300px;
+	height: 58px;
+	line-height: 58px;
+	background: #191E46;
+	margin-top: 10px;
+}
+
+.industryBackground .titleMax {
+	float: left;
+}
+
+.industryBackground .titleAve {
+	float: right;
+}
+
+.industryBackground .titleMax span,
+.industryBackground .titleAve span {
+	float: left;
+	margin-left: 18px;
+}
+
+.industryBackground .titleMax i,
+.industryBackground .titleAve i {
+	float: right;
+	color: #4ADCBB;
+	margin-right: 14px;
+}
+
+.indechaes {
+	width: 640px;
+	height: 330px;
+     /*
+ 	background: #fff;
+     */
+ 	margin-top: 70px;
+}
+
+
+/*============================================*/
+
+
+/*=====================专业分析================*/
+
+.analysis .left,
+.analysis .center,
+.analysis .right {
+	height: 810px;
+	width: 620px;
+	margin-right: 20px;
+}
+
+.analysis .right {
+	margin-right: 0;
+	width: 630px;
+}
+
+.analysis .right {
+	width: 630px;
+}
+
+.tab {
+	width: 1920px;
+	height: 120px;
+	line-height: 120px;
+}
+
+.tab-li {
+	float: left;
+	width: 320px;
+	height: 120px;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 36px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.disc {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.5);
+	margin-right: 20px;
+}
+
+.analysis .title,
+.wisdom .title,
+.wisdom1 .title{
+	width: 600px;
+	height: 70px;
+	line-height: 70px;
+	background: #293567;
+	font-size: 24px;
+	padding-left: 20px;
+}
+
+.analysis .basicInfo,
+.wisdom .basicInfo {
+	width: 620px;
+	height: 360px;
+	background-color: rgba(25, 30, 70, 1);
+	margin-top: 20px;
+	padding-top:30px;
+}
+
+.wisdom1 .basicInfo {
+	width: 630px;
+	background-color: rgba(25, 30, 70, 1);
+	margin-top: 24px;
+}
+
+.basicInfoLi {
+	float: left;
+	width: 50%;
+	height: 100px;
+	/* padding-top: 9px; */
+	margin-bottom: 10px;
+}
+
+.basicInfoLi .numb {
+	color: #36D134;
+	font-size: 24px;
+}
+
+.basicInfoLi>div {
+	float: left;
+}
+
+.basicInfoLeft {
+	width: 55px;
+	height: 110px;
+	margin-left: 50px;
+	margin-right: 20px;
+}
+
+.basicInfoLeft img {
+	width: 55px;
+	height: 100px;
+}
+
+.basicInforight .text {
+	line-height: 50px;
+}
+
+.basicInforight .numb {
+	line-height: 60px;
+}
+
+.analysisEchers1 {
+	width: 620px;
+	height: 740px;
+ 	background: #fff;
+ }
+
+.analysisEchers2 {
+	width: 620px;
+	height: 370px;
+ 	padding-top: 20px;
+ }
+
+.analysisEchers3 {
+	width: 620px;
+	height: 290px;
+ }
+
+.analysis .active {
+	color: #4ADCBB;
+}
+
+.analysis .active .disc {
+	background: #4ADCBB;
+}
+
+
+/*============================================*/
+
+
+/*=====================智慧学习=======================*/
+
+.wisdom .basicInfo {
+	height: 260px;
+}
+
+.wisdom .partnerSchools,.wisdom1 .partnerSchools {
+	float: left;
+	width: 295px;
+	border-color: #FFAD00;
+	margin-left: 10px;
+	margin-top: 35px;
+}
+
+.wisOption {
+	width: 620px;
+	height: 125px;
+	background-color: rgba(25, 30, 70, 1);
+	margin-top: 20px;
+}
+
+.wisOptionLi {
+	float: left;
+	width: 310px;
+	height: 60px;
+	line-height: 60px;
+}
+
+.wisOptionLi span {
+	display: inline-block;
+	width: 190px;
+	padding-left: 20px;
+	vertical-align: middle;
+}
+
+.wisOptionLi i {
+	color: #36D134;
+	font-size: 24px;
+	vertical-align: middle;
+}
+
+.wisdomEchars1,
+.wisdomEchars2 {
+	width: 620px;
+	height: 360px;
+	background: #202554;
+}
+.wisdomEchars3,
+.wisdomEchars4 {
+	width: 630px;
+	height: 370px;
+}
+
+.wisPeopNumb {
+	display: inline-block;
+	width: 190px;
+	height: 40px;
+	line-height: 40px;
+	padding:10px 0 10px 12px;
+	color: #4ADBBB;
+	float: left;
+}
+.wisdomEchars5,.wisdomEchars6{
+	float: left;
+	width: 315px;
+	height: 370px;
+}
+
+.wisdom1 .icon{
+	line-height: 24px;
+	margin-left: 20px;
+	width: 100px;
+	text-align: center;
+}
+.ring{
+	width: 100px;
+	height: 100px;
+	background: rgba(0,0,0,0);
+	margin-top: 30px;
+	/* border: 5px solid white; */
+	/* border-radius: 75px; */
+}
+.wisPeopNumbBox{
+	width: 620px;
+	height: 230px;
+	background: #202554;
+}
+.wisEchars7,.wisEchars8,.wisdomEchars9,.wisdomEchars10{
+	float: left;
+	width: 310px;
+	height: 360px;
+	/*border: 1px solid #ccc;*/
+}
+.wisClick{
+	width: 630px;
+	height: 70px;
+	background: #293567;
+}
+.wisdomEchars10{
+	background-color:rgba(25,30,70,1);
+}
+.studyHotTitle{
+	width: 300px;
+	height: 60px;
+	line-height: 60px;
+	padding-left: 10px;
+	color: #FBCB10;
+}
+.studyHotLi{
+	width: 310px;
+	height: 54px;
+	line-height: 54px;
+	/*border-bottom: 1px solid #656771;*/
+}
+.studyHotLi img,.studyHotLi span,.studyHotLi i{
+	vertical-align: middle;
+}
+.studyHotIcon{
+	display: inline-block;
+	width: 70px;
+	height: 54px;
+	text-align: center;
+}
+.studyHotLi i{
+	float: right;
+	margin-right: 10px;
+}
+.wisdomEchars11{
+	width: 620px;
+	height: 410px;
+ 	/*background: #fff;*/
+ }
+/*============================================*/

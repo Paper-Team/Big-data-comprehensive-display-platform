@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>经世数家</title>
+    <!-- <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+    <script type="text/javascript" src="js/time.js"></script>
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <script type="text/javascript" src="js/darkTheme.js"></script> -->
+    <script type="text/javascript" src="js/professionalAnalysis2.js"></script>
+</head>
+
+<body>
+<div class="box clearfix analysis" style="height: 960px;padding-top: 0px;">
+    <ul class="tab clearfix" style="width:1600px;display: inline-block">
+        <!-- <li class="tab-li active" id=1><span class="disc"></span><i>通信方向</i></li>
+        <li class="tab-li" id=2><span class="disc"></span><i>移动互联方向</i></li>
+        <li class="tab-li" id=3><span class="disc"></span><i>云计算方向</i></li>
+        <li class="tab-li" id=4><span class="disc"></span><i>物联网方向</i></li>
+        <li class="tab-li" id=5><span class="disc"></span><i>智能制造方向</i></li> -->
+    </ul>
+    <div style="background-color:#1F2346;width: 300px;height: 50px;text-align: right;color:#51DBBC;float: right;line-height:124px;margin-right: 20px;">* 数据统计截止到 2018-05-31</div>
+    <div class="left">
+        <div class="title">基本信息</div>
+        <ul class="basicInfo clearfix">
+            <li class="basicInfoLi clearfix">
+                <div class="basicInfoLeft">
+                    <img src="img/professionalanalysis2/zyfx_kaisheshijian.png"/>
+                </div>
+                <div class="basicInforight">
+                    <p class="text">开设时间</p>
+                    <p class="numb setupTime"><i id="setupTime">2000</i>年</p>
+                </div>
+            </li>
+            <li class="basicInfoLi clearfix">
+                <div class="basicInfoLeft">
+                    <img src="img/professionalanalysis2/zyfx_xueshengrenshu.png"/>
+                </div>
+                <div class="basicInforight">
+                    <p class="text">学生人数</p>
+                    <p class="numb majorStudent"><i id="majorStudent">0</i>人</p>
+                </div>
+            </li>
+            <li class="basicInfoLi clearfix">
+                <div class="basicInfoLeft">
+                    <img src="img/professionalanalysis2/zyfx_jiaocai.png"/>
+                </div>
+                <div class="basicInforight">
+                    <p class="text">教材</p>
+                    <p class="numb majorBook"><i id="majorBook">0</i>本</p>
+                </div>
+            </li>
+            <li class="basicInfoLi clearfix">
+                <div class="basicInfoLeft">
+                    <img src="img/professionalanalysis2/zyfx_shizituandui.png"/>
+                </div>
+                <div class="basicInforight">
+                    <p class="text">师资团队</p>
+                    <p class="numb majorTeacher"><i id="majorTeacher">0</i>人</p>
+                </div>
+            </li>
+            <li class="basicInfoLi clearfix">
+                <div class="basicInfoLeft">
+                    <img src="img/professionalanalysis2/zyfx_kechengshu.png"/>
+                </div>
+                <div class="basicInforight">
+                    <p class="text">课程数</p>
+                    <p class="numb majorCourse"><i id="majorCourse">0</i>门</p>
+                </div>
+            </li>
+            <li class="basicInfoLi clearfix">
+                <div class="basicInfoLeft">
+                    <img src="img/professionalanalysis2/zyfx_keshishu.png"/>
+                </div>
+                <div class="basicInforight">
+                    <p class="text">课时数</p>
+                    <p class="numb majorCourseHour"><i id="majorCourseHour">0</i>课时</p>
+                </div>
+            </li>
+        </ul>
+        <div class="partnerSchools clearfix" style="margin-top: 10px;margin-left: 10px;border-color: #4ADCBB;width: 605px;">
+            <div class="icon">
+                <img src="img/professionalOperating1/zyyy_hezuoyuanxiao.png"/>
+            </div>
+            <div class="totalNumber">
+                <p class="text">合作院校</p>
+                <p class="numb schoolNum" id='schoolNum'>0</p>
+            </div>
+            <div class="each" style="border-color: #4ADCBB">
+                <div class="undergraduate"><span>本科</span><i id='undergraduate'>0</i></div>
+                <div class="HigherVocational"><span>高职</span><i id='HigherVocational'>0</i></div>
+            </div>
+        </div>
+        <div class="partnerSchools clearfix"
+             style="margin-top: 10px;width: 320px;margin-left: 10px;border-color: #FFAD00;">
+            <div class="icon">
+                <img src="img/professionalanalysis2/zyfx_manyidu.png"/>
+            </div>
+            <div class="totalNumber">
+                <p class="text">满意度</p>
+                <p class="numb majorSatisfaction"><i id="majorSatisfaction">0</i>%</p>
+            </div>
+        </div>
+    </div>
+    <div class="center">
+        <div class="title">就业岗位分布</div>
+        <div class="analysisEchers1" id="analysisEchers1" style="background-color: #191E46">
+        </div>
+        <div id="noDataMsg" style="background-color:#191e46;text-align:center;line-height:740px;font-size: 30px;display: none">
+            本专业方向暂无毕业生
+        </div>
+    </div>
+    <div class="right">
+        <div class="title">历年录取人数</div>
+        <div class="analysisEchers2" id="analysisEchers2"></div>
+        <div class="title" style="margin-top: 18px;">历年双创产品和团队</div>
+        <div class="analysisEchers3" id="analysisEchers3"></div>
+
+    </div>
+
+</div>
+</body>
+
+</html>
