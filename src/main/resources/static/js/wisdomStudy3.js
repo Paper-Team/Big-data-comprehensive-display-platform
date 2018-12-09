@@ -9,7 +9,7 @@ $(function () {
         "smartLearningTea/resourcePercent");
     courseInfo();
     onlinetea();
-    //在线学生5个方框
+    //在线学生5个方框（测试）
     getOnlineTeaFive();
 //alert($('#ipAndPort').attr("data-id"))
 })
