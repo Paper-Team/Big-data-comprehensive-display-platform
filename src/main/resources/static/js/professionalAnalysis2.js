@@ -48,7 +48,7 @@ function thrEcharts(majorName) {
     loadEmploymentPositionPie(majorName);
   }
   loadGradeDistributedBar(majorName);
-  loadDoubleCreateBar(majorName);
+  // loadDoubleCreateBar(majorName);
   loadBasicInfo(majorName);
 }
 
@@ -175,7 +175,7 @@ function loadGradeDistributedBar(majorName) {
   var undergraduate = [];// 本科录取人数
   var vocational = [];// 高职录取人数
   var grade = [];// 录取年份
-  var legend = ['本科', '高职'];
+  var legend = ['单招', '高考'];
   var xName = '年份';
   var yName = '人数';
 
