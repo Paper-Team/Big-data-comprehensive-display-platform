@@ -6,42 +6,33 @@ function changesCanvas(id, width, height) {
 }
 
 $(function () {
-  loadHtml("professionalOperating1");
+  loadHtml("professionalanalysis2");
   $(".pre").click(function () {
     var index = parseInt($(this).attr("data-index"));
-    if (index == 5) {
+    if (index == 3) {
       // window.location=''
       //alert("第一页了");
     } else {
       var next = index;
       var pre = index - 1;
       if (index == 1) {
-        pre = 5;
+        pre = 3;
       }
       $(".next").attr("data-index", next);
       $(this).attr("data-index", pre);
       if (index == 1) {
-        loadHtml("professionalOperating1");
-        $("#title").text("专业运营");
-      } else if (index == 2) {
         loadHtml("professionalanalysis2");
         $("#title").text("专业分析");
-
-      } else if (index == 3) {
+      } else if (index == 2) {
         loadHtml("wisdomStudy3");
         $("#title").text("智慧学习");
-
-      } else if (index == 4) {
-        loadHtml("wisdomStudy4");
-        $("#title").text("智慧学习");
-
       }
     }
 
   })
   $(".next").click(function () {
     var index = parseInt($(this).attr("data-index"));
-    if (index == 6) {
+    if (index == 4) {
       // window.location=''
       //alert("最后一页了");
     } else {
@@ -50,25 +41,17 @@ $(function () {
       $(this).attr("data-index", next);
       $(".pre").attr("data-index", pre);
       if (index == 1) {
-        loadHtml("professionalanalysis2");
-        $("#title").text("专业分析");
-
-      } else if (index == 2) {
         loadHtml("wisdomStudy3");
         $("#title").text("智慧学习");
 
-      } else if (index == 3) {
-        loadHtml("wisdomStudy4");
-        $("#title").text("智慧学习");
-
-      } else if (index == 4) {
+      } else if (index == 2) {
         loadHtml("jobAnalysis5");
         $("#title").text("就业分析");
 
-      } else if (index == 5) {
+      } else if (index == 3) {
         //返回首页
-        loadHtml("professionalOperating1");
-        $("#title").text("专业运营");
+        loadHtml("professionalanalysis2");
+        $("#title").text("专业分析");
         $(this).attr("data-index", 1);
       }
     }

@@ -5,10 +5,13 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.0.105:3306/datahome_v2.4_display?useUnicode=true&characterEncoding=utf8
-    #url: jdbc:mysql://210.12.56.69:3306/datahome_v2.4_display?useUnicode=true&characterEncoding=utf8
-    username: zhjydb
-    password: zhjydb_20160219
+    url: jdbc:mysql://localhost:3306/datadisplay?useUnicode=true&characterEncoding=utf8
+#    url: jdbc:mysql://192.168.0.105:3306/datahome_v2.4_display?useUnicode=true&characterEncoding=utf8
+#    url: jdbc:mysql://210.12.56.69:3306/datahome_v2.4_display?useUnicode=true&characterEncoding=utf8
+#    username: zhjydb
+#    password: zhjydb
+    username: root
+    password: root
     initialSize: 1
     minIdle: 3
     maxActive: 20
