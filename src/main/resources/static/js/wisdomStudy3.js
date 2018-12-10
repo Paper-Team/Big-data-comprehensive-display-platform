@@ -112,7 +112,8 @@ function courseInfo() {
             item34 = getItemFromList(datas, "当日发布直播数量");
 
             //基本信息
-            countUp(schoolnum, 0, item11.value, '');
+            // countUp(schoolnum, 0, item11.value, '');
+            countUp(schoolnum, 0, '陕西国防学院', '');
             countUp(teachernum, 0, item12.value, '');
             countUp(classnum, 0, item13.value, '');
             countUp(studentnum, 0, item14.value, '');
