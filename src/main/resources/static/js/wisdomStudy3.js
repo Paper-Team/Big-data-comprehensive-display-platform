@@ -291,13 +291,16 @@ function compulsoryGoodCourse(echartsId, url) {
             // 加载数据图表
             var option = baseBarTwoSource(name, compulsory, goods, '');
 
-            option.title.text = '最近30天新建课程数量';
+            option.title.text = '最近30天上课情况';
             option.title.textStyle.color = '#F8C911';
             option.dataZoom[0].end = '100';
             option.dataZoom[0].show = false;
             option.series[0].barGap = '0.3';
             option.series[0].barWidth = '5';
             option.series[1].barWidth = '5';
+
+            option.legend.data = ['必修课程', '选修课程'];
+            option.series[1].name = '选修课程';
 
             myChart.setOption(option);
         },
