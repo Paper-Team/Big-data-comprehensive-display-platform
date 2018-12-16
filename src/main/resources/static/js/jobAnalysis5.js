@@ -194,25 +194,26 @@ function employment(majorName) {
       var len = result.length;
       if (len != 0) {
         man.push(result.undergraduateMale);
-        man.push(result.vocationalMale);
+        // man.push(result.vocationalMale);
         woman.push(result.undergraduateFemale);
-        woman.push(result.vocationalFemale);
+        // woman.push(result.vocationalFemale);
         var allGraduationNum = man[0] + man[1] + woman[0]
           + woman[1]; // 累计毕业生数量
+        var allGraduationNum = man[0] + woman[0] ; // 累计毕业生数量
       }
 
       var option = pictorialBar(man, woman);
 
-      var coe = 2;// 保证象形图label右对齐
-      man[0] > man[1]
-        ? option.xAxis.max = man[0] * coe
-        : option.xAxis.max = man[1] * coe;
-
-      woman[0] > woman[1]
-        ? option.xAxis.max = woman[0] * coe
-        : option.xAxis.max = woman[1] * coe;
-      option.series[0].label.position = [520, 0];
-      option.series[1].label.position = [520, 0];
+      // var coe = 2;// 保证象形图label右对齐
+      // man[0] > man[1]
+      //   ? option.xAxis.max = man[0] * coe
+      //   : option.xAxis.max = man[1] * coe;
+      //
+      // woman[0] > woman[1]
+      //   ? option.xAxis.max = woman[0] * coe
+      //   : option.xAxis.max = woman[1] * coe;
+      option.series[0].label.position = [560, 0];
+      option.series[1].label.position = [560, 0];
       Chart.setOption(option);
       // 加载累计毕业生数量
       loadNumbers('allGraduationNum',

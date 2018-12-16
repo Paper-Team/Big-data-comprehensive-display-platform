@@ -1859,7 +1859,7 @@ function pictorialBar(manData, womanData) {
       left: 20
     },
     yAxis: {
-      data: ['本科', '高职'],
+      data: ['', ''],
       inverse: true,
       axisLine: {
         show: false
